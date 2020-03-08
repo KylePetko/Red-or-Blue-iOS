@@ -15,6 +15,17 @@
 		D764460A241483D90059E0EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7644608241483D90059E0EA /* LaunchScreen.storyboard */; };
 		D7644615241483DA0059E0EA /* Red_or_BlueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7644614241483DA0059E0EA /* Red_or_BlueTests.swift */; };
 		D7644620241483DA0059E0EA /* Red_or_BlueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D764461F241483DA0059E0EA /* Red_or_BlueUITests.swift */; };
+		D7D9897E2414C6DE007FE7DF /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7D9897C2414C6DE007FE7DF /* Interface.storyboard */; };
+		D7D989802414C6E2007FE7DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7D9897F2414C6E2007FE7DF /* Assets.xcassets */; };
+		D7D989872414C6E2007FE7DF /* Red-or-Blue-WatchOS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D7D989862414C6E2007FE7DF /* Red-or-Blue-WatchOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D7D9898C2414C6E2007FE7DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D9898B2414C6E2007FE7DF /* ContentView.swift */; };
+		D7D9898E2414C6E2007FE7DF /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D9898D2414C6E2007FE7DF /* HostingController.swift */; };
+		D7D989902414C6E2007FE7DF /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D9898F2414C6E2007FE7DF /* ExtensionDelegate.swift */; };
+		D7D989922414C6E2007FE7DF /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D989912414C6E2007FE7DF /* NotificationController.swift */; };
+		D7D989942414C6E2007FE7DF /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D989932414C6E2007FE7DF /* NotificationView.swift */; };
+		D7D989962414C6E5007FE7DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7D989952414C6E5007FE7DF /* Assets.xcassets */; };
+		D7D989992414C6E5007FE7DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7D989982414C6E5007FE7DF /* Preview Assets.xcassets */; };
+		D7D9899F2414C6E5007FE7DF /* Red-or-Blue-WatchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D7D9897A2414C6DE007FE7DF /* Red-or-Blue-WatchOS.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +43,46 @@
 			remoteGlobalIDString = D76445F9241483D40059E0EA;
 			remoteInfo = "Red or Blue";
 		};
+		D7D989882414C6E2007FE7DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D76445F2241483D40059E0EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7D989852414C6E2007FE7DF;
+			remoteInfo = "Red-or-Blue-WatchOS Extension";
+		};
+		D7D9899C2414C6E5007FE7DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D76445F2241483D40059E0EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7D989792414C6DE007FE7DF;
+			remoteInfo = "Red-or-Blue-WatchOS";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D7D9899E2414C6E5007FE7DF /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				D7D9899F2414C6E5007FE7DF /* Red-or-Blue-WatchOS.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7D989A22414C6E5007FE7DF /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D7D989872414C6E2007FE7DF /* Red-or-Blue-WatchOS Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D76445FA241483D40059E0EA /* Red or Blue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Red or Blue.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +99,20 @@
 		D764461B241483DA0059E0EA /* Red or BlueUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Red or BlueUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D764461F241483DA0059E0EA /* Red_or_BlueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Red_or_BlueUITests.swift; sourceTree = "<group>"; };
 		D7644621241483DA0059E0EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7D9897A2414C6DE007FE7DF /* Red-or-Blue-WatchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Red-or-Blue-WatchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7D9897D2414C6DE007FE7DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		D7D9897F2414C6E2007FE7DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D7D989812414C6E2007FE7DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7D989862414C6E2007FE7DF /* Red-or-Blue-WatchOS Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Red-or-Blue-WatchOS Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7D9898B2414C6E2007FE7DF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D7D9898D2414C6E2007FE7DF /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		D7D9898F2414C6E2007FE7DF /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		D7D989912414C6E2007FE7DF /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		D7D989932414C6E2007FE7DF /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		D7D989952414C6E5007FE7DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D7D989982414C6E5007FE7DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D7D9899A2414C6E5007FE7DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7D9899B2414C6E5007FE7DF /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +137,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D7D989832414C6E2007FE7DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -82,6 +153,8 @@
 				D76445FC241483D40059E0EA /* Red or Blue */,
 				D7644613241483DA0059E0EA /* Red or BlueTests */,
 				D764461E241483DA0059E0EA /* Red or BlueUITests */,
+				D7D9897B2414C6DE007FE7DF /* Red-or-Blue-WatchOS */,
+				D7D9898A2414C6E2007FE7DF /* Red-or-Blue-WatchOS Extension */,
 				D76445FB241483D40059E0EA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +165,8 @@
 				D76445FA241483D40059E0EA /* Red or Blue.app */,
 				D7644610241483DA0059E0EA /* Red or BlueTests.xctest */,
 				D764461B241483DA0059E0EA /* Red or BlueUITests.xctest */,
+				D7D9897A2414C6DE007FE7DF /* Red-or-Blue-WatchOS.app */,
+				D7D989862414C6E2007FE7DF /* Red-or-Blue-WatchOS Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -136,6 +211,40 @@
 			path = "Red or BlueUITests";
 			sourceTree = "<group>";
 		};
+		D7D9897B2414C6DE007FE7DF /* Red-or-Blue-WatchOS */ = {
+			isa = PBXGroup;
+			children = (
+				D7D9897C2414C6DE007FE7DF /* Interface.storyboard */,
+				D7D9897F2414C6E2007FE7DF /* Assets.xcassets */,
+				D7D989812414C6E2007FE7DF /* Info.plist */,
+			);
+			path = "Red-or-Blue-WatchOS";
+			sourceTree = "<group>";
+		};
+		D7D9898A2414C6E2007FE7DF /* Red-or-Blue-WatchOS Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D7D9898B2414C6E2007FE7DF /* ContentView.swift */,
+				D7D9898D2414C6E2007FE7DF /* HostingController.swift */,
+				D7D9898F2414C6E2007FE7DF /* ExtensionDelegate.swift */,
+				D7D989912414C6E2007FE7DF /* NotificationController.swift */,
+				D7D989932414C6E2007FE7DF /* NotificationView.swift */,
+				D7D989952414C6E5007FE7DF /* Assets.xcassets */,
+				D7D9899A2414C6E5007FE7DF /* Info.plist */,
+				D7D9899B2414C6E5007FE7DF /* PushNotificationPayload.apns */,
+				D7D989972414C6E5007FE7DF /* Preview Content */,
+			);
+			path = "Red-or-Blue-WatchOS Extension";
+			sourceTree = "<group>";
+		};
+		D7D989972414C6E5007FE7DF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D7D989982414C6E5007FE7DF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,10 +255,12 @@
 				D76445F6241483D40059E0EA /* Sources */,
 				D76445F7241483D40059E0EA /* Frameworks */,
 				D76445F8241483D40059E0EA /* Resources */,
+				D7D9899E2414C6E5007FE7DF /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D7D9899D2414C6E5007FE7DF /* PBXTargetDependency */,
 			);
 			name = "Red or Blue";
 			productName = "Red or Blue";
@@ -192,6 +303,40 @@
 			productReference = D764461B241483DA0059E0EA /* Red or BlueUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		D7D989792414C6DE007FE7DF /* Red-or-Blue-WatchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7D989A62414C6E5007FE7DF /* Build configuration list for PBXNativeTarget "Red-or-Blue-WatchOS" */;
+			buildPhases = (
+				D7D989782414C6DE007FE7DF /* Resources */,
+				D7D989A22414C6E5007FE7DF /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D7D989892414C6E2007FE7DF /* PBXTargetDependency */,
+			);
+			name = "Red-or-Blue-WatchOS";
+			productName = "Red-or-Blue-WatchOS";
+			productReference = D7D9897A2414C6DE007FE7DF /* Red-or-Blue-WatchOS.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		D7D989852414C6E2007FE7DF /* Red-or-Blue-WatchOS Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7D989A52414C6E5007FE7DF /* Build configuration list for PBXNativeTarget "Red-or-Blue-WatchOS Extension" */;
+			buildPhases = (
+				D7D989822414C6E2007FE7DF /* Sources */,
+				D7D989832414C6E2007FE7DF /* Frameworks */,
+				D7D989842414C6E2007FE7DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Red-or-Blue-WatchOS Extension";
+			productName = "Red-or-Blue-WatchOS Extension";
+			productReference = D7D989862414C6E2007FE7DF /* Red-or-Blue-WatchOS Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -213,6 +358,12 @@
 						CreatedOnToolsVersion = 11.3.1;
 						TestTargetID = D76445F9241483D40059E0EA;
 					};
+					D7D989792414C6DE007FE7DF = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					D7D989852414C6E2007FE7DF = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
 				};
 			};
 			buildConfigurationList = D76445F5241483D40059E0EA /* Build configuration list for PBXProject "Red or Blue" */;
@@ -231,6 +382,8 @@
 				D76445F9241483D40059E0EA /* Red or Blue */,
 				D764460F241483DA0059E0EA /* Red or BlueTests */,
 				D764461A241483DA0059E0EA /* Red or BlueUITests */,
+				D7D989792414C6DE007FE7DF /* Red-or-Blue-WatchOS */,
+				D7D989852414C6E2007FE7DF /* Red-or-Blue-WatchOS Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -257,6 +410,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7D989782414C6DE007FE7DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7D989802414C6E2007FE7DF /* Assets.xcassets in Resources */,
+				D7D9897E2414C6DE007FE7DF /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7D989842414C6E2007FE7DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7D989992414C6E5007FE7DF /* Preview Assets.xcassets in Resources */,
+				D7D989962414C6E5007FE7DF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +460,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D7D989822414C6E2007FE7DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7D9898E2414C6E2007FE7DF /* HostingController.swift in Sources */,
+				D7D9898C2414C6E2007FE7DF /* ContentView.swift in Sources */,
+				D7D989922414C6E2007FE7DF /* NotificationController.swift in Sources */,
+				D7D989902414C6E2007FE7DF /* ExtensionDelegate.swift in Sources */,
+				D7D989942414C6E2007FE7DF /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -302,6 +485,16 @@
 			target = D76445F9241483D40059E0EA /* Red or Blue */;
 			targetProxy = D764461C241483DA0059E0EA /* PBXContainerItemProxy */;
 		};
+		D7D989892414C6E2007FE7DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7D989852414C6E2007FE7DF /* Red-or-Blue-WatchOS Extension */;
+			targetProxy = D7D989882414C6E2007FE7DF /* PBXContainerItemProxy */;
+		};
+		D7D9899D2414C6E5007FE7DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7D989792414C6DE007FE7DF /* Red-or-Blue-WatchOS */;
+			targetProxy = D7D9899C2414C6E5007FE7DF /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -311,6 +504,14 @@
 				D7644609241483D90059E0EA /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D7D9897C2414C6DE007FE7DF /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7D9897D2414C6DE007FE7DF /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -554,6 +755,92 @@
 			};
 			name = Release;
 		};
+		D7D989A02414C6E5007FE7DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2F9S96DK4W;
+				IBSC_MODULE = Red_or_Blue_WatchOS_Extension;
+				INFOPLIST_FILE = "Red-or-Blue-WatchOS/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mobile-Hats.Red-or-Blue.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Debug;
+		};
+		D7D989A12414C6E5007FE7DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2F9S96DK4W;
+				IBSC_MODULE = Red_or_Blue_WatchOS_Extension;
+				INFOPLIST_FILE = "Red-or-Blue-WatchOS/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mobile-Hats.Red-or-Blue.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Release;
+		};
+		D7D989A32414C6E5007FE7DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Red-or-Blue-WatchOS Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 2F9S96DK4W;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Red-or-Blue-WatchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Mobile-Hats.Red-or-Blue.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Debug;
+		};
+		D7D989A42414C6E5007FE7DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Red-or-Blue-WatchOS Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 2F9S96DK4W;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Red-or-Blue-WatchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Mobile-Hats.Red-or-Blue.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -589,6 +876,24 @@
 			buildConfigurations = (
 				D764462B241483DA0059E0EA /* Debug */,
 				D764462C241483DA0059E0EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7D989A52414C6E5007FE7DF /* Build configuration list for PBXNativeTarget "Red-or-Blue-WatchOS Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7D989A32414C6E5007FE7DF /* Debug */,
+				D7D989A42414C6E5007FE7DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7D989A62414C6E5007FE7DF /* Build configuration list for PBXNativeTarget "Red-or-Blue-WatchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7D989A02414C6E5007FE7DF /* Debug */,
+				D7D989A12414C6E5007FE7DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
