@@ -68,30 +68,36 @@ class GetDay: ObservableObject {
 
     init() {
         
-        var url = NSURL(string: "https://redorblue.kylepet.co")
-
-        if url != nil {
-            let task = URLSession.shared.dataTask(with: url! as URL, completionHandler: { (data, response, error) -> Void in
-                print(data)
-
-                if error == nil {
-
-                    var urlContent = NSString(data: data!, encoding: String.Encoding.ascii.rawValue) as NSString?
-
-                    self.currentDay = urlContent as! String
-                }
-            })
-            task.resume()
+        let url = NSURL(string: "https://www.googleapis.com/calendar/v3/calendars/lgsuhsd.org_tebqf0pqvog3p4s5flsmddg4u8%40group.calendar.google.com/events?maxResults=3&key=AIzaSyCIQTEHeJgecY8GIZrHBnbgFWu3enzr304&futureevents=true&singleevents=true")
+        let task = URLSession.shared.dataTask(with: url! as URL) {(data, response, error) in
+            let dataAsNSString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+            
+           DispatchQueue.main.async() {
+               self.currentDay = dataAsNSString as! String
+           }
+           
         }
+        task.resume()
+        
+        
+
+        
+        
+        
+        
+        
+        
+    }
         
         
         
 }
+
 
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
-}
+
 }

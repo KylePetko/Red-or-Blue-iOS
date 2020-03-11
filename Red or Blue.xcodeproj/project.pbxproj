@@ -15,6 +15,7 @@
 		D764460A241483D90059E0EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7644608241483D90059E0EA /* LaunchScreen.storyboard */; };
 		D7644615241483DA0059E0EA /* Red_or_BlueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7644614241483DA0059E0EA /* Red_or_BlueTests.swift */; };
 		D7644620241483DA0059E0EA /* Red_or_BlueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D764461F241483DA0059E0EA /* Red_or_BlueUITests.swift */; };
+		D7D4F9682418CB2800E38EFA /* libAlamofire.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = D7D4F9672418CB2800E38EFA /* libAlamofire.a */; };
 		D7D9897E2414C6DE007FE7DF /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7D9897C2414C6DE007FE7DF /* Interface.storyboard */; };
 		D7D989802414C6E2007FE7DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7D9897F2414C6E2007FE7DF /* Assets.xcassets */; };
 		D7D989872414C6E2007FE7DF /* Red-or-Blue-WatchOS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D7D989862414C6E2007FE7DF /* Red-or-Blue-WatchOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -60,6 +61,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		D7D4F9632418CAF700E38EFA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D7D4F9682418CB2800E38EFA /* libAlamofire.a in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D7D9899E2414C6E5007FE7DF /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -99,6 +110,7 @@
 		D764461B241483DA0059E0EA /* Red or BlueUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Red or BlueUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D764461F241483DA0059E0EA /* Red_or_BlueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Red_or_BlueUITests.swift; sourceTree = "<group>"; };
 		D7644621241483DA0059E0EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7D4F9672418CB2800E38EFA /* libAlamofire.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAlamofire.a; path = "../../Library/Developer/Xcode/DerivedData/Red_or_Blue-enpjdwltcxedmfgtnceshfimbukr/Build/Products/Debug-iphoneos/Alamofire/libAlamofire.a"; sourceTree = "<group>"; };
 		D7D9897A2414C6DE007FE7DF /* Red-or-Blue-WatchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Red-or-Blue-WatchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7D9897D2414C6DE007FE7DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		D7D9897F2414C6E2007FE7DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -116,6 +128,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2B279FDBA3C90FD92D69B208 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D76445F7241483D40059E0EA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -150,6 +169,7 @@
 		D76445F1241483D40059E0EA = {
 			isa = PBXGroup;
 			children = (
+				D7D4F9672418CB2800E38EFA /* libAlamofire.a */,
 				D76445FC241483D40059E0EA /* Red or Blue */,
 				D7644613241483DA0059E0EA /* Red or BlueTests */,
 				D764461E241483DA0059E0EA /* Red or BlueUITests */,
@@ -256,6 +276,7 @@
 				D76445F7241483D40059E0EA /* Frameworks */,
 				D76445F8241483D40059E0EA /* Resources */,
 				D7D9899E2414C6E5007FE7DF /* Embed Watch Content */,
+				D7D4F9632418CAF700E38EFA /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -309,6 +330,7 @@
 			buildPhases = (
 				D7D989782414C6DE007FE7DF /* Resources */,
 				D7D989A22414C6E5007FE7DF /* Embed App Extensions */,
+				2B279FDBA3C90FD92D69B208 /* Frameworks */,
 			);
 			buildRules = (
 			);

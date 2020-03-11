@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import Red_or_Blue
 
 class Red_or_BlueTests: XCTestCase {
 
