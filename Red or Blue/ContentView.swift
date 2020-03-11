@@ -6,9 +6,18 @@
 //  Copyright © 2020 Kyle Petkovic. All rights reserved.
 //
 
+
 import SwiftUI
 
+
+
 struct ContentView: View {
+    
+    
+    
+    
+    @ObservedObject var day = GetDay()
+    let url = NSURL(string: "redorblue.kylepet.co")
     var body: some View {
         
         
@@ -27,9 +36,9 @@ struct ContentView: View {
                         Spacer()
                         Spacer()
                         Spacer()
-                        Text("Tomorrow is a red day")
+                        Text("\(day.currentDay)")
                             .font(.largeTitle)
-                            .foregroundColor(.red)
+                            //.foregroundColor(.red)
                     }
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
                     .edgesIgnoringSafeArea(.all)
@@ -40,16 +49,49 @@ struct ContentView: View {
                 .navigationBarTitle("Red or Blue")
             }
         }
+    
+    
+    
+
+    
+    
+    
+    
+    
         
         
        
     }
-    
 
+class GetDay: ObservableObject {
+    @Published var currentDay = "0"
+
+    init() {
+        
+        var url = NSURL(string: "https://redorblue.kylepet.co")
+
+        if url != nil {
+            let task = URLSession.shared.dataTask(with: url! as URL, completionHandler: { (data, response, error) -> Void in
+                print(data)
+
+                if error == nil {
+
+                    var urlContent = NSString(data: data!, encoding: String.Encoding.ascii.rawValue) as NSString?
+
+                    self.currentDay = urlContent as! String
+                }
+            })
+            task.resume()
+        }
+        
+        
+        
+}
 
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
+}
 }
