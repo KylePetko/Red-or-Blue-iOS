@@ -54,14 +54,22 @@ class GetDay: ObservableObject {
         
         
         
-        let url = NSURL(string: "https://www.googleapis.com/calendar/v3/calendars/lgsuhsd.org_tebqf0pqvog3p4s5flsmddg4u8%40group.calendar.google.com/events?&key=AIzaSyB9LL_hsg4zvXzMhUATBCXp92P5Q7LHxe0&timeMin=\(beforeDate)T10:00:00-07:00&singleEvents=true&orderBy=startTime&timeMax=\(beforeDate)T10:01:00-07:00")
+        let session = URLSession.shared
         
-        let task = URLSession.shared.dataTask(with: url! as URL) {(data, response, error) in
-            let dataAsNSString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-            
         
+        let url = URL(string: "https://www.googleapis.com/calendar/v3/calendars/lgsuhsd.org_tebqf0pqvog3p4s5flsmddg4u8%40group.calendar.google.com/events?&key=AIzaSyB9LL_hsg4zvXzMhUATBCXp92P5Q7LHxe0&timeMin=\(beforeDate)T10:00:00-07:00&singleEvents=true&orderBy=startTime&timeMax=\(beforeDate)T10:01:00-07:00")!
+        
+        let task = session.dataTask(with: url) { data, response, error in
             
-            var dateData = dataAsNSString! as String
+            var dateData = ""
+            
+            if data != nil{
+                let dataAsNSString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+                dateData = dataAsNSString! as String
+            }
+            else {
+                self.currentDay = "You're offline \n Turn off airplain mode or connect to wifi."
+            }
             
           
             
