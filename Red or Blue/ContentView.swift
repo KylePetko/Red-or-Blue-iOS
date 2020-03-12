@@ -8,13 +8,19 @@
 
 
 import SwiftUI
+import UIKit
+import SafariServices
+
 
 
 
 struct ContentView: View {
     
     
-    
+    // whether or not to show the Safari ViewController
+    @State var showSafari = false
+    // initial URL string
+    @State var urlString = "https://calendar.google.com/calendar/embed?src=lgsuhsd.org_tebqf0pqvog3p4s5flsmddg4u8%40group.calendar.google.com&ctz=America%2FLos_Angeles"
     
     @ObservedObject var day = GetDay()
     
@@ -24,7 +30,23 @@ struct ContentView: View {
         
             NavigationView {
                 ScrollView {
-                Divider()
+                Divider().navigationBarTitle("Red or Blue")
+                .navigationBarItems(trailing:
+                
+                    
+                        Button(action: {
+                            // update the URL if you'd like to
+                            self.urlString = "https://calendar.google.com/calendar/embed?src=lgsuhsd.org_tebqf0pqvog3p4s5flsmddg4u8%40group.calendar.google.com&ctz=America%2FLos_Angeles"
+                            // tell the app that we want to show the Safari VC
+                            self.showSafari = true
+                        }) {
+                            Group {
+                                Text("Calendar")
+                            }.sheet(isPresented: $showSafari) {
+                                SafariView(url:URL(string: self.urlString)!)
+                            }
+                        }
+                    )
                 
                     
                 
@@ -47,10 +69,13 @@ struct ContentView: View {
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
                     .edgesIgnoringSafeArea(.all)
                     
+                    
+                    
                 
                     
                 }
-                .navigationBarTitle("Red or Blue")
+                
+                
             }
         }
     
@@ -67,7 +92,19 @@ struct ContentView: View {
        
     }
 
+struct SafariView: UIViewControllerRepresentable {
 
+    let url: URL
+
+    func makeUIViewController(context: UIViewControllerRepresentableContext<SafariView>) -> SFSafariViewController {
+        return SFSafariViewController(url: url)
+    }
+
+    func updateUIViewController(_ uiViewController: SFSafariViewController, context: UIViewControllerRepresentableContext<SafariView>) {
+
+    }
+
+}
 
 
 class GetDay: ObservableObject {
