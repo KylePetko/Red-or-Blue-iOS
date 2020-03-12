@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Red or Blue iMessage MessagesExtension.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
-		</dict>
 		<key>Red or Blue.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +18,29 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>D76445F9241483D40059E0EA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D764460F241483DA0059E0EA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D764461A241483DA0059E0EA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D7D989792414C6DE007FE7DF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

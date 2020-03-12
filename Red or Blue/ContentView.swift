@@ -38,7 +38,7 @@ struct ContentView: View {
                         Spacer()
                         Spacer()
                         Text("\(day.currentDay)")
-                            .font(.largeTitle)
+                            .font(day.font)
                             .multilineTextAlignment(.center)
                             .foregroundColor(day.textColor)
                             .animation(Animation.spring())
@@ -73,6 +73,7 @@ struct ContentView: View {
 class GetDay: ObservableObject {
     @Published var currentDay = ""
     @Published var textColor = Color.white
+    @Published var font = Font.largeTitle
 
     init() {
         
@@ -92,17 +93,27 @@ class GetDay: ObservableObject {
         
         var beforeDate = modifiedDateBeforeText.prefix(10)
        
+        let session = URLSession.shared
         
         
+        let url = URL(string: "https://www.googleapis.com/calendar/v3/calendars/lgsuhsd.org_tebqf0pqvog3p4s5flsmddg4u8%40group.calendar.google.com/events?&key=AIzaSyB9LL_hsg4zvXzMhUATBCXp92P5Q7LHxe0&timeMin=\(beforeDate)T10:00:00-07:00&singleEvents=true&orderBy=startTime&timeMax=\(beforeDate)T10:01:00-07:00")!
         
-        let url = NSURL(string: "https://www.googleapis.com/calendar/v3/calendars/lgsuhsd.org_tebqf0pqvog3p4s5flsmddg4u8%40group.calendar.google.com/events?&key=AIzaSyB9LL_hsg4zvXzMhUATBCXp92P5Q7LHxe0&timeMin=\(beforeDate)T10:00:00-07:00&singleEvents=true&orderBy=startTime&timeMax=\(beforeDate)T10:01:00-07:00")
-        
-        let task = URLSession.shared.dataTask(with: url! as URL) {(data, response, error) in
-            let dataAsNSString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+        let task = session.dataTask(with: url) { data, response, error in
+            
+            var dateData = ""
+            
+            if data != nil{
+                let dataAsNSString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+                dateData = dataAsNSString! as String
+            }
+            else {
+                self.currentDay = "You're offline \n Turn off airplain mode or connect to wifi."
+            }
+            
             
         
             
-            var dateData = dataAsNSString! as String
+        
             
           
             
@@ -127,6 +138,7 @@ class GetDay: ObservableObject {
             else{
                 self.currentDay = "Tomorrow there is no school"
                 self.textColor = Color.white
+                self.font = Font.system(size: 30)
             }
             
             
