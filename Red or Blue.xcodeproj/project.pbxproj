@@ -15,7 +15,6 @@
 		D764460A241483D90059E0EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7644608241483D90059E0EA /* LaunchScreen.storyboard */; };
 		D7644615241483DA0059E0EA /* Red_or_BlueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7644614241483DA0059E0EA /* Red_or_BlueTests.swift */; };
 		D7644620241483DA0059E0EA /* Red_or_BlueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D764461F241483DA0059E0EA /* Red_or_BlueUITests.swift */; };
-		D7D4F9682418CB2800E38EFA /* libAlamofire.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = D7D4F9672418CB2800E38EFA /* libAlamofire.a */; };
 		D7D9897E2414C6DE007FE7DF /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7D9897C2414C6DE007FE7DF /* Interface.storyboard */; };
 		D7D989802414C6E2007FE7DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7D9897F2414C6E2007FE7DF /* Assets.xcassets */; };
 		D7D989872414C6E2007FE7DF /* Red-or-Blue-WatchOS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D7D989862414C6E2007FE7DF /* Red-or-Blue-WatchOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -67,7 +66,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D7D4F9682418CB2800E38EFA /* libAlamofire.a in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +108,13 @@
 		D764461B241483DA0059E0EA /* Red or BlueUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Red or BlueUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D764461F241483DA0059E0EA /* Red_or_BlueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Red_or_BlueUITests.swift; sourceTree = "<group>"; };
 		D7644621241483DA0059E0EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D7D4F9672418CB2800E38EFA /* libAlamofire.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAlamofire.a; path = "../../Library/Developer/Xcode/DerivedData/Red_or_Blue-enpjdwltcxedmfgtnceshfimbukr/Build/Products/Debug-iphoneos/Alamofire/libAlamofire.a"; sourceTree = "<group>"; };
+		D7D4F96D2419D4AB00E38EFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D7D4F96F2419D4AB00E38EFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7D4F9792419D4AB00E38EFA /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		D7D4F97C2419D4AB00E38EFA /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		D7D4F97F2419D4AB00E38EFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		D7D4F9812419D4AD00E38EFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D7D4F9832419D4AD00E38EFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7D9897A2414C6DE007FE7DF /* Red-or-Blue-WatchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Red-or-Blue-WatchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7D9897D2414C6DE007FE7DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		D7D9897F2414C6E2007FE7DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -169,12 +173,14 @@
 		D76445F1241483D40059E0EA = {
 			isa = PBXGroup;
 			children = (
-				D7D4F9672418CB2800E38EFA /* libAlamofire.a */,
 				D76445FC241483D40059E0EA /* Red or Blue */,
 				D7644613241483DA0059E0EA /* Red or BlueTests */,
 				D764461E241483DA0059E0EA /* Red or BlueUITests */,
 				D7D9897B2414C6DE007FE7DF /* Red-or-Blue-WatchOS */,
 				D7D9898A2414C6E2007FE7DF /* Red-or-Blue-WatchOS Extension */,
+				D7D4F96C2419D4A800E38EFA /* Red or Blue iMessage */,
+				D7D4F97B2419D4AB00E38EFA /* Red or Blue iMessage MessagesExtension */,
+				D7D4F9782419D4AB00E38EFA /* Frameworks */,
 				D76445FB241483D40059E0EA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -229,6 +235,34 @@
 				D7644621241483DA0059E0EA /* Info.plist */,
 			);
 			path = "Red or BlueUITests";
+			sourceTree = "<group>";
+		};
+		D7D4F96C2419D4A800E38EFA /* Red or Blue iMessage */ = {
+			isa = PBXGroup;
+			children = (
+				D7D4F96D2419D4AB00E38EFA /* Assets.xcassets */,
+				D7D4F96F2419D4AB00E38EFA /* Info.plist */,
+			);
+			path = "Red or Blue iMessage";
+			sourceTree = "<group>";
+		};
+		D7D4F9782419D4AB00E38EFA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D7D4F9792419D4AB00E38EFA /* Messages.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D7D4F97B2419D4AB00E38EFA /* Red or Blue iMessage MessagesExtension */ = {
+			isa = PBXGroup;
+			children = (
+				D7D4F97C2419D4AB00E38EFA /* MessagesViewController.swift */,
+				D7D4F97E2419D4AB00E38EFA /* MainInterface.storyboard */,
+				D7D4F9812419D4AD00E38EFA /* Assets.xcassets */,
+				D7D4F9832419D4AD00E38EFA /* Info.plist */,
+			);
+			path = "Red or Blue iMessage MessagesExtension";
 			sourceTree = "<group>";
 		};
 		D7D9897B2414C6DE007FE7DF /* Red-or-Blue-WatchOS */ = {
@@ -526,6 +560,14 @@
 				D7644609241483D90059E0EA /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D7D4F97E2419D4AB00E38EFA /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7D4F97F2419D4AB00E38EFA /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 		D7D9897C2414C6DE007FE7DF /* Interface.storyboard */ = {
